@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-
-const routes: Routes = [];
+// tslint:disable:typedef
+const routes: Routes = [
+	{
+		path: 'auth',
+		loadChildren: () => import('./feature/auth/auth.module').then(m => m.AuthModule),
+	},
+];
+// tslint:enable:typedef
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
