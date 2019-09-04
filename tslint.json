@@ -124,6 +124,14 @@
 			"member-variable-declaration",
 			"object-destructuring",
 			"array-destructuring"
-		]
+		],
+    "no-pipe-impure": true,
+    "no-lifecycle-call": true,
+    "no-attribute-decorator": true,
+    "contextual-decorator": true,
+    "component-max-inline-declarations": [true, { "animations": 20, "styles": 8, "template": 5 }],
+    "template-no-any": true,
+    "angular-whitespace": [true, "check-interpolation", "check-pipe", "check-semicolon"],
+    "prefer-output-readonly": true
 	}
 }
