@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins/icons-mixins';
+
+.icon {
+	@include icon-font;
+	&:before {
+		margin-right: 20px;
+	}
+}
+
+@function unicode($str) {
+	@return unquote('"') + $str + unquote('"');
+}
+
+.icon--close {
+	&:before {
+		content: $icon-close;
+	}
+}
+
+.icon--left {
+	&:before {
+		content: $icon-left;
+	}
+}
+
+.icon--at {
+	&:before {
+		content: $icon-at;
+	}
+}
+
+.icon--linkedin {
+	&:before {
+		content: $icon-linkedin;
+	}
+}
+
+.icon--codepen {
+	&:before {
+		content: $icon-codepen;
+	}
+}
+
+.icon--github {
+	&:before {
+		content: $icon-github;
+	}
+}

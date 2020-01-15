@@ -1,0 +1,268 @@
+.animated {
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+
+.animated--fast {
+	animation-duration: 1s;
+}
+
+.animated--infinite {
+	animation-iteration-count: infinite;
+}
+
+.animation__pulse {
+	animation-name: pulse_animation;
+}
+
+.animation__blog {
+	animation-name: blog-way;
+
+	&--hide {
+		animation-name: blog-way-hide;
+	}
+}
+
+.animation__projects {
+	animation-name: projects-way;
+
+	&--hide {
+		animation-name: projects-way-hide;
+	}
+}
+
+.animation__about {
+	animation-name: about-way;
+
+	&--hide {
+		animation-name: about-way-hide;
+	}
+}
+
+.animation__contact {
+	animation-name: contact-way;
+
+	&--hide {
+		animation-name: contact-way-hide;
+	}
+}
+
+// KEYFRAMES
+
+@keyframes pulse_animation {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes blog-way {
+	0% {
+		top: 200px;
+		left: 200px;
+	}
+
+	100% {
+		top: -80px;
+		left: -80px;
+	}
+}
+
+@keyframes projects-way {
+	0% {
+		top: 200px;
+		right: 200px;
+	}
+
+	100% {
+		top: -80px;
+		right: -80px;
+	}
+}
+
+@keyframes about-way {
+	0% {
+		bottom: 200px;
+		left: 200px;
+	}
+
+	100% {
+		bottom: -80px;
+		left: -80px;
+	}
+}
+
+@keyframes contact-way {
+	0% {
+		bottom: 200px;
+		right: 200px;
+	}
+
+	100% {
+		bottom: -80px;
+		right: -80px;
+	}
+}
+
+@keyframes blog-way-hide {
+	100% {
+		top: 200px;
+		left: 200px;
+	}
+
+	0% {
+		top: -80px;
+		left: -80px;
+	}
+}
+
+@keyframes projects-way-hide {
+	100% {
+		top: 200px;
+		right: 200px;
+	}
+
+	0% {
+		top: -80px;
+		right: -80px;
+	}
+}
+
+@keyframes about-way-hide {
+	100% {
+		bottom: 200px;
+		left: 200px;
+	}
+
+	0% {
+		bottom: -80px;
+		left: -80px;
+	}
+}
+
+@keyframes contact-way-hide {
+	100% {
+		bottom: 200px;
+		right: 200px;
+	}
+
+	0% {
+		bottom: -80px;
+		right: -80px;
+	}
+}
+
+@media ($bp-m) {
+	@keyframes blog-way {
+		0% {
+			top: 110px;
+			left: 110px;
+		}
+
+		100% {
+			top: 0px;
+			left: 0px;
+		}
+	}
+
+	@keyframes projects-way {
+		0% {
+			top: 110px;
+			right: 110px;
+		}
+
+		100% {
+			top: 0px;
+			right: 0px;
+		}
+	}
+
+	@keyframes about-way {
+		0% {
+			bottom: 110px;
+			left: 110px;
+		}
+
+		100% {
+			bottom: 0px;
+			left: 0px;
+		}
+	}
+
+	@keyframes contact-way {
+		0% {
+			bottom: 110px;
+			right: 110px;
+		}
+
+		100% {
+			bottom: 0px;
+			right: 0px;
+		}
+	}
+
+	@keyframes blog-way-hide {
+		100% {
+			top: 110px;
+			left: 110px;
+		}
+
+		0% {
+			top: 0px;
+			left: 0px;
+		}
+	}
+
+	@keyframes projects-way-hide {
+		100% {
+			top: 110px;
+			right: 110px;
+		}
+
+		0% {
+			top: 0px;
+			right: 0px;
+		}
+	}
+
+	@keyframes about-way-hide {
+		100% {
+			bottom: 110px;
+			left: 110px;
+		}
+
+		0% {
+			bottom: 0px;
+			left: 0px;
+		}
+	}
+
+	@keyframes contact-way-hide {
+		100% {
+			bottom: 110px;
+			right: 110px;
+		}
+
+		0% {
+			bottom: 0px;
+			right: 0px;
+		}
+	}
+}
+
+@keyframes rotation-anim {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}

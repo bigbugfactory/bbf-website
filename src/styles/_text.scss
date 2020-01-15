@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'fonts';
+
+@mixin text-header-1 {
+	font: $weight-bold 1.2rem/1.4rem Roboto, sans-serif;
+	white-space: pre-line;
+}
+
+@mixin text-header-2 {
+	font: $weight-bold 1rem/1.4rem Roboto, sans-serif;
+	white-space: pre-line;
+
+	@media ($bp-s) {
+		font: $weight-bold 1.5rem/1.4rem Roboto, sans-serif;
+	}
+}
+
+@mixin text-header-3 {
+	font: $weight-bold 3.2rem/3rem Roboto, sans-serif;
+	white-space: pre-line;
+}
+
+@mixin text-body-1 {
+	font: $weight-normal 1.4rem/2rem Roboto, sans-serif;
+	white-space: pre-line;
+
+	@media ($bp-s) {
+		font: $weight-normal 2rem/2.5rem Roboto, sans-serif;
+	}
+}
+
+@mixin text-body-2 {
+	font: $weight-bold 1.2rem/2rem Roboto, sans-serif;
+	white-space: pre-line;
+
+	@media ($bp-s) {
+		font: $weight-bold 1.8rem/1.4rem Roboto, sans-serif;
+	}
+}

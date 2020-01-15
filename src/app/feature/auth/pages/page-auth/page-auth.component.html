@@ -1,1 +1,24 @@
-<p>Example auth page</p>
+<div class="landing-page">
+	<div class="landing-page__title">
+		<span class="title__name">Wiktoria Czepułkowska</span>
+		<span class="title__profession">Frontend Developer</span>
+	</div>
+	<div class="landing-page__menu">
+		<div class="menu__container">
+			<div
+				*ngIf="!show"
+				(click)="change()"
+				[class.animation__pulse]="!show"
+				class="item-animation animated animated--infinite"
+			></div>
+		</div>
+		<div *ngIf="show" class="menu__container">
+			<div (click)="hideAnim()" class="list-item__close icon icon--close"></div>
+		</div>
+		<div *ngIf="show" class="menu__list">
+			<div *ngFor="let item of itemsArr">
+				<app-menu-item [color]="item" [name]="item" [href]="'/' + item"></app-menu-item>
+			</div>
+		</div>
+	</div>
+</div>

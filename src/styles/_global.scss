@@ -1,0 +1,120 @@
+@import 'variables';
+
+:root {
+	font: {
+		size: 100%;
+		family: Roboto, sans-serif;
+		weight: normal;
+	}
+	background: $color-white;
+
+	@media ($bp-m) {
+		font-size: 50%;
+	}
+}
+
+.container {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	@media ($bp-m) {
+		margin: 0;
+		margin-bottom: -30px;
+		overflow-y: visible;
+	}
+}
+
+.container__group {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+
+	@media ($bp-m) {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		width: 100%;
+	}
+}
+
+.container__group--center {
+	justify-content: flex-end;
+}
+
+.container__content {
+	width: 80%;
+	margin: 0 auto 50px;
+}
+
+.container__content--small {
+	width: 60%;
+
+	@media ($bp-m) {
+		width: 90%;
+	}
+}
+
+.container__title {
+	@include text-header-3;
+	color: $color-white;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.container__paragraph {
+	@include text-body-1;
+	color: $color-white;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+.container__link {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.container__link-href {
+	@include text-body-1;
+	color: $color-white;
+	letter-spacing: 3px;
+	word-break: break-all;
+}
+
+.container__link-icon {
+	color: $color-white;
+	&:before {
+		font-size: 32px;
+	}
+}
+
+.one-group {
+	margin: 20% auto;
+	width: 40%;
+
+	@media ($bp-m) {
+		width: 90%;
+	}
+}
+
+.left-side {
+	width: 50%;
+
+	@media ($bp-m) {
+		width: 100%;
+		height: 70%;
+		overflow: auto;
+	}
+}
+
+.right-side {
+	width: 50%;
+	margin: auto;
+
+	@media ($bp-m) {
+		width: 100%;
+		margin: inherit;
+	}
+}

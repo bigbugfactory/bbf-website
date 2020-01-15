@@ -1,0 +1,32 @@
+@function unicode($str) {
+	@return unquote('"') + $str + unquote('"');
+}
+
+@mixin icon-font {
+	font-family: 'icons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon($icon, $side: before) {
+	@if ($side == before) {
+		&:before {
+			content: unicode($icon);
+			@include icon-font;
+			@content;
+		}
+	} @else if ($side == after) {
+		&:after {
+			content: unicode($icon);
+			@include icon-font;
+			@content;
+		}
+	}
+}

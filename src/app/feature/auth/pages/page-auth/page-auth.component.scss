@@ -1,0 +1,129 @@
+@import 'variables';
+@import 'text';
+@import 'animations';
+
+.landing-page {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+}
+
+.landing-page__title {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+}
+
+.title__name {
+	@include text-header-1;
+	color: $color-pink;
+	margin-right: 16px;
+}
+
+.title__profession {
+	position: relative;
+	@include text-header-1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: -10px;
+		height: 13px;
+		width: 2px;
+		background: $color-black;
+
+		@media ($bp-s) {
+			top: -1px;
+			height: 9px;
+		}
+	}
+}
+
+.menu__container {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	border: 5px solid $color-black;
+	overflow: hidden;
+
+	@media ($bp-s) {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+.item-animation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: $color-black;
+	cursor: pointer;
+	margin: auto;
+
+	&:before {
+		content: 'klik!';
+		margin: auto;
+		@include text-body-2;
+		text: {
+			transform: uppercase;
+			align: center;
+		}
+		letter-spacing: 1px;
+		color: $color-white;
+	}
+
+	@media ($bp-s) {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+.menu__list {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 500px;
+	width: 500px;
+	margin: auto;
+
+	@media ($bp-s) {
+		height: 300px;
+		width: 300px;
+	}
+}
+
+.list-item__close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background: $color-black;
+	color: $color-white;
+	border-radius: 50%;
+	margin: auto;
+	font-size: 22px;
+	transition: 300ms linear;
+	z-index: 1;
+	cursor: pointer;
+
+	&:before {
+		margin-right: 0;
+	}
+
+	&:hover {
+		animation: rotation-anim;
+	}
+}

@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'text';
+@import 'animations';
+
+.list-item {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100px;
+	border-radius: 60px;
+	transition: 300ms ease-in-out;
+
+	&:before {
+		content: '';
+		margin: auto;
+		@include text-header-2;
+		text: {
+			transform: uppercase;
+			align: center;
+		}
+		letter-spacing: 1px;
+		color: $color-white;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	@media ($bp-m) {
+		height: 80px;
+		width: 80px;
+	}
+}
+
+.list-item--blog {
+	top: -80px;
+	left: -80px;
+	background-color: $color-green;
+
+	&:before {
+		content: 'blog';
+	}
+
+	@media ($bp-m) {
+		top: 50px;
+		left: 50px;
+	}
+}
+
+.list-item--projects {
+	top: -80px;
+	right: -80px;
+	background-color: $color-yellow;
+
+	&:before {
+		content: 'projekty';
+	}
+
+	@media ($bp-m) {
+		top: 50px;
+		right: 50px;
+	}
+}
+
+.list-item--about {
+	bottom: -80px;
+	left: -80px;
+	background-color: $color-orange;
+
+	&:before {
+		content: 'o mnie';
+	}
+
+	@media ($bp-m) {
+		bottom: 50px;
+		left: 50px;
+	}
+}
+
+.list-item--contact {
+	bottom: -80px;
+	right: -80px;
+	background-color: $color-blue;
+
+	&:before {
+		content: 'kontakt';
+	}
+
+	@media ($bp-m) {
+		bottom: 50px;
+		right: 50px;
+	}
+}

@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'text';
+
+.container {
+	background: $color-orange;
+}
+
+.right-side__image {
+	background: {
+		image: url('/assets/images/wiktoria.jpg');
+		size: cover;
+		repeat: no-repeat;
+	}
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	margin: auto;
+
+	@media ($bp-m) {
+		width: 200px;
+		height: 200px;
+		margin: 50px auto;
+	}
+}
