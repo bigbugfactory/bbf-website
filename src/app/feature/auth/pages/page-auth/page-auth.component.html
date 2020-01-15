@@ -7,17 +7,27 @@
 		<div class="menu__container">
 			<div
 				*ngIf="!show"
-				(click)="change()"
+				(click)="show = true"
 				[class.animation__pulse]="!show"
 				class="item-animation animated animated--infinite"
 			></div>
 		</div>
-		<div *ngIf="show" class="menu__container">
-			<div (click)="hideAnim()" class="list-item__close icon icon--close"></div>
+		<div *ngIf="show" [style.border-color]="currentColor" class="menu__container">
+			<div
+				(click)="hideAnim()"
+				[style.background-color]="currentColor"
+				class="list-item__close icon icon--close"
+			></div>
 		</div>
 		<div *ngIf="show" class="menu__list">
 			<div *ngFor="let item of itemsArr">
-				<app-menu-item [color]="item" [name]="item" [href]="'/' + item"></app-menu-item>
+				<app-menu-item
+					(mouseover)="changeColor(item)"
+					(mouseout)="removeColor()"
+					[color]="item"
+					[name]="item"
+					[href]="'/' + item"
+				></app-menu-item>
 			</div>
 		</div>
 	</div>

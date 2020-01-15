@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChooseColor } from 'src/app/core/models/color.interface';
 import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
@@ -8,9 +9,8 @@ import { MenuService } from 'src/app/core/services/menu.service';
 })
 export class PageAuthComponent {
 	public show: boolean = false;
-	public removeStartAnim: boolean;
 	public itemsArr: string[] = ['blog', 'projects', 'about', 'contact'];
-	public fullColor: string;
+	public currentColor: ChooseColor;
 
 	constructor(private menuService: MenuService) {}
 
@@ -18,9 +18,29 @@ export class PageAuthComponent {
 		this.show = false;
 	}
 
-	public change(): void {
-		this.show = true;
+	public changeColor(item: string): void {
+		switch (item) {
+			case 'blog':
+				this.currentColor = ChooseColor.g;
+				break;
 
-		// this.menuService.changeColor();
+			case 'projects':
+				this.currentColor = ChooseColor.y;
+				break;
+
+			case 'about':
+				this.currentColor = ChooseColor.o;
+				break;
+
+			case 'contact':
+				this.currentColor = ChooseColor.b;
+				break;
+			default:
+				this.currentColor = ChooseColor.black;
+		}
+	}
+
+	public removeColor(): void {
+		this.currentColor = ChooseColor.black;
 	}
 }

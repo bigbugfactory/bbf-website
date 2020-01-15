@@ -3,8 +3,9 @@ export interface ColorState {
 }
 
 export enum ChooseColor {
-	b = 'blue',
-	y = 'yellow',
-	g = 'green',
-	o = 'orange',
+	b = '#8c92f4',
+	y = '#ffe27a',
+	g = '#58d295',
+	o = '#ffa279',
+	black = '#323',
 }
